@@ -35,32 +35,88 @@ biblioteca-mvp/
 - Streamlit
 - Pandas
 
-## Instalación
+## Instalación en Linux/macOS
 
 1. Clonar el repositorio o descargar los archivos
 
-2. Instalar las dependencias:
+2. Crear un entorno virtual (recomendado):
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-```bash
-pip install streamlit pandas
-```
+3. Instalar las dependencias:
+   ```bash
+   pip install streamlit pandas
+   ```
 
-## Uso
+## Instalación en Windows
 
-1. Ejecutar la aplicación:
+1. Clonar el repositorio o descargar los archivos
 
-```bash
-streamlit run app.py
-```
+2. Abrir la línea de comandos (cmd) o PowerShell en la carpeta del proyecto
 
-2. Navegar a la dirección proporcionada (generalmente `http://localhost:8501`)
+3. Crear un entorno virtual (recomendado):
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-3. Utilizar la barra lateral para navegar entre las diferentes secciones:
+4. Instalar las dependencias:
+   ```
+   pip install streamlit pandas
+   ```
+
+## Uso en Linux/macOS
+
+1. Activar el entorno virtual si no está activado:
+   ```bash
+   source venv/bin/activate
+   ```
+
+2. Ejecutar la aplicación:
+   ```bash
+   streamlit run app.py
+   ```
+
+3. Navegar a la dirección proporcionada (generalmente `http://localhost:8501`)
+
+## Uso en Windows
+
+1. Activar el entorno virtual si no está activado:
+   ```
+   venv\Scripts\activate
+   ```
+
+2. Ejecutar la aplicación:
+   ```
+   streamlit run app.py
+   ```
+
+3. Navegar a la dirección proporcionada (generalmente `http://localhost:8501`)
+
+4. Utilizar la barra lateral para navegar entre las diferentes secciones:
    - **Inicio**: Dashboard con estadísticas
    - **Gestión de Libros**: Administrar libros
    - **Gestión de Usuarios**: Administrar usuarios
    - **Gestión de Préstamos**: Crear y gestionar préstamos
    - **Acerca del Sistema**: Información sobre el MVP
+
+## Solución de problemas comunes en Windows
+
+1. **Error al activar el entorno virtual**: Si aparece un error relacionado con la política de ejecución en PowerShell, ejecute:
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   ```
+
+2. **Python no reconocido como comando**: Asegúrese de que Python esté añadido al PATH del sistema. Durante la instalación de Python, marque la opción "Add Python to PATH".
+
+3. **Problemas de permisos**: Ejecute la línea de comandos como administrador si encuentra errores de permisos.
+
+4. **Errores con dependencias**: Si hay problemas con la instalación de paquetes, intente actualizar pip:
+   ```
+   python -m pip install --upgrade pip
+   ```
 
 ## Ejecución de Pruebas
 
